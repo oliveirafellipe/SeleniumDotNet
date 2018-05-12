@@ -9,7 +9,7 @@ namespace SeleniumDotNet
     class SetUp
     {
         
-        static void Main()
+        static void exMain()
         {
             SetUp setup = new SetUp();
             IWebDriver browser = setup.getBrowser();
@@ -20,6 +20,7 @@ namespace SeleniumDotNet
             ProtectorSeguradoHomePage seguradoHome = new ProtectorSeguradoHomePage(browser);
             home.ClickLogin();
             modalHome.clickSouSegurado();
+            seguradoHome.clickPreLogin();
             seguradoHome.typeUsername("hardwsystem@gmail.com.trin.ca");
             seguradoHome.typePassword("1234");
             seguradoHome.clickLogin();

@@ -10,7 +10,7 @@ namespace SeleniumDotNet.Pages
 
         public ProtectorSeguradoHomePage clickSouSegurado()
         {
-            browser.FindElement(By.LinkText("http://staging.argo-protector.com.br/meuprotector"))
+            browser.FindElement(By.CssSelector("#loginModal > div > div > div:nth-child(1) > a"))
                 .Click();
 
             return new ProtectorSeguradoHomePage(browser);

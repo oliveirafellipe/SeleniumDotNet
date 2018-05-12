@@ -7,7 +7,7 @@ namespace SeleniumDotNet.Pages
         public ProtectorSeguradoHomePage(IWebDriver browser) : base(browser) { }
 
 
-        public ProtectorSeguradoHomePage clickLogin()
+        public ProtectorSeguradoHomePage clickPreLogin()
         {
             browser.FindElement(By.CssSelector("#form1 > div.ctn-main > div.grp-presentation.wdt-lmt > div.menu-login > span.btn-login"))
                 .Click();
@@ -31,7 +31,7 @@ namespace SeleniumDotNet.Pages
             return this;
         }
 
-        public ProtectorSeguradoHomePage clickLogin(string pass)
+        public ProtectorSeguradoHomePage clickLogin()
         {
             browser.FindElement(By.Id("ContentPlaceHolder1_btnLogin"))
                 .Click();
