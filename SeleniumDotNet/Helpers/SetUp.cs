@@ -6,29 +6,9 @@ using System;
 
 namespace SeleniumDotNet
 {
-    class SetUp
+    public class SetUp
     {
-        
-        static void exMain()
-        {
-            SetUp setup = new SetUp();
-            IWebDriver browser = setup.getBrowser();
-
-
-            ProtectorHomePage home = new ProtectorHomePage(browser);
-            ProtectorHomeModalLoginPage modalHome = new ProtectorHomeModalLoginPage(browser);
-            ProtectorSeguradoHomePage seguradoHome = new ProtectorSeguradoHomePage(browser);
-            home.ClickLogin();
-            modalHome.clickSouSegurado();
-            seguradoHome.clickPreLogin();
-            seguradoHome.typeUsername("hardwsystem@gmail.com.trin.ca");
-            seguradoHome.typePassword("1234");
-            seguradoHome.clickLogin();
-
-
-        }
-
-       public IWebDriver getBrowser()
+        public IWebDriver getBrowser()
         {
             IWebDriver browser = new ChromeDriver("C:\\Selenium\\ChromeDriver\\");
 
@@ -40,5 +20,5 @@ namespace SeleniumDotNet
 
             return browser;
         }
-    }
+    }   
 }
